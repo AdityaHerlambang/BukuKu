@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".BookingActivity">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:elevation="8dp"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!--FORM COMPONENT-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorWhiteText"
+                    card_view:cardCornerRadius="3dp"
+                    card_view:cardElevation="4dp"
+                    card_view:cardUseCompatPadding="true"
+                    android:layout_gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:textColor="@color/colorWhiteText"
+                                android:background="@color/colorPrimary"
+                                android:layout_width="match_parent"
+                                android:padding="8dp"
+                                android:textSize="@dimen/card_textSize_form"
+                                android:layout_height="wrap_content"
+                                android:text="Detail Penerbit"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" android:layout_marginRight="@dimen/form_textInputLayout_marginRight">
+
+                                <EditText
+                                    android:id="@+id/nama"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/form_content_height"
+                                    android:layout_marginTop="@dimen/form_content_marginTop"
+                                    android:ems="10"
+                                    android:hint="Nama Penerbit"
+                                    android:inputType="text"
+                                    android:textColor="@color/colorPrimaryText"
+                                    android:textColorHint="@color/colorSecondaryText"
+                                    android:textSize="@dimen/card_textSize_form" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Button
+                                android:id="@+id/btn_simpan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="8dp"
+                                android:background="@color/colorSuccess"
+                                android:text="Simpan"
+                                android:textColor="@color/colorWhiteText" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>
