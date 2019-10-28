@@ -15,5 +15,4 @@ public class BukuWithRelations {
     @Relation(parentColumn = "kategori_id", entityColumn = "kategori_id", entity = Kategori.class)
     public List<Kategori> kategoris;
 
-
 }

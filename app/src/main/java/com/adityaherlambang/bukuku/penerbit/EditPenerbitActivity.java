@@ -55,8 +55,8 @@ public class EditPenerbitActivity extends AppCompatActivity {
             AppExecutors.getInstance().diskIO().execute(new Runnable() {
                 @Override
                 public void run() {
-                    Kategori kategori = mDb.kategoriDao().loadKategoriById(mPenerbitId);
-                    setUiData(kategori);
+                    Penerbit penerbit = mDb.penerbitDao().loadPenerbitById(mPenerbitId);
+                    setUiData(penerbit);
                 }
             });
         }
@@ -70,15 +70,15 @@ public class EditPenerbitActivity extends AppCompatActivity {
 
     }
 
-    private void setUiData(final Kategori kategori){
-        if (kategori == null) {
+    private void setUiData(final Penerbit penerbit){
+        if (penerbit == null) {
             return;
         }
 
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                binding.nama.setText(kategori.getNamaKategori());
+                binding.nama.setText(penerbit.getNamaPenerbit());
             }
         });
 
